@@ -1,260 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Holiday Inn Resort Phuket Surin Beach | Investment Opportunity</title>
+<title>Holiday Inn Resort Phuket Surin Beach | Investor Presentation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
---navy:#071426;
---gold:#C9A86A;
---light:#F7F8FA;
---white:#ffffff;
---gray:#6B7280;
---green:#0D8F4F;
---red:#C0392B;
+    --bg:#071018;
+    --card:#0f1b26;
+    --card2:#122433;
+    --gold:#d4af37;
+    --green:#3DFF8B;
+    --white:#ffffff;
+    --soft:#b8c2cc;
+    --line:rgba(255,255,255,0.08);
+    --red:#ff5d5d;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#f4f6f9;
-color:#111827;
-line-height:1.6;
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(180deg,#061018 0%,#091520 100%);
+    color:white;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
 }
 
 .container{
-width:100%;
-max-width:1400px;
-margin:auto;
-padding:20px;
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:24px;
 }
 
+/* HERO */
+
 .hero{
-background:linear-gradient(rgba(7,20,38,.75),rgba(7,20,38,.75)),
-url("https://images.unsplash.com/photo-1571896349842-33c89424de2d");
-background-size:cover;
-background-position:center;
-color:white;
-padding:100px 40px;
-border-radius:20px;
-position:relative;
-overflow:hidden;
+    position:relative;
+    border-radius:32px;
+    overflow:hidden;
+    min-height:720px;
+    display:flex;
+    align-items:flex-end;
+    background:
+    linear-gradient(to top, rgba(0,0,0,.82), rgba(0,0,0,.2)),
+    url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1800&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    margin-bottom:40px;
+    border:1px solid rgba(255,255,255,0.08);
 }
 
 .logo{
-position:absolute;
-top:30px;
-right:30px;
-font-size:28px;
-font-weight:900;
-letter-spacing:2px;
-color:var(--gold);
+    position:absolute;
+    top:30px;
+    right:30px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    padding:14px 24px;
+    border-radius:14px;
+    font-weight:800;
+    letter-spacing:3px;
+    font-size:14px;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.hero-content{
+    padding:60px;
+    width:100%;
+}
+
+.tag{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:999px;
+    background:rgba(212,175,55,0.15);
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:24px;
+    font-size:14px;
 }
 
 .hero h1{
-font-size:52px;
-font-weight:900;
-max-width:900px;
-line-height:1.1;
+    font-size:64px;
+    line-height:1;
+    margin-bottom:18px;
+    max-width:950px;
 }
 
 .hero p{
-font-size:20px;
-margin-top:20px;
-max-width:900px;
+    font-size:20px;
+    color:#d7dde3;
+    line-height:1.7;
+    max-width:900px;
 }
 
-.section{
-margin-top:35px;
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.05);
+.asking{
+    margin-top:36px;
+    display:inline-flex;
+    align-items:center;
+    gap:20px;
+    background:linear-gradient(135deg,#3DFF8B,#00d66f);
+    color:#00150a;
+    padding:24px 36px;
+    border-radius:22px;
+    font-weight:900;
+    font-size:34px;
+    box-shadow:0 25px 50px rgba(61,255,139,.25);
 }
 
-.section-title{
-font-size:28px;
-font-weight:800;
-color:var(--navy);
-margin-bottom:25px;
-border-left:6px solid var(--gold);
-padding-left:15px;
+.asking span{
+    font-size:16px;
+    font-weight:700;
 }
+
+/* GRID */
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+    margin-bottom:40px;
 }
 
 .card{
-background:#fff;
-border:1px solid #eee;
-padding:25px;
-border-radius:16px;
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border-radius:24px;
+    padding:28px;
+    border:1px solid var(--line);
 }
 
 .card h3{
-color:var(--gray);
-font-size:14px;
-text-transform:uppercase;
-letter-spacing:1px;
-margin-bottom:8px;
+    color:var(--soft);
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:14px;
 }
 
 .card h2{
-font-size:32px;
-font-weight:800;
-color:var(--navy);
+    font-size:42px;
+    font-weight:900;
 }
 
-.highlight{
-color:var(--green);
+.card p{
+    margin-top:12px;
+    color:var(--soft);
+    line-height:1.7;
 }
 
-.table-wrapper{
-width:100%;
-overflow-x:auto;
--webkit-overflow-scrolling:touch;
-border-radius:12px;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-min-width:900px;
-}
-
-th{
-background:var(--navy);
-color:white;
-padding:15px;
-text-align:center;
-vertical-align:middle;
-}
-
-td{
-padding:15px;
-text-align:center;
-vertical-align:middle;
-border-bottom:1px solid #eee;
-}
-
-tr:hover{
-background:#f9fafb;
-}
-
-.badge{
-padding:8px 16px;
-border-radius:50px;
-font-weight:700;
-display:inline-block;
-}
-
-.green{
-background:#d4f8e5;
-color:#0D8F4F;
-}
-
-.gold{
-background:#f7efd8;
-color:#b08a3c;
-}
-
-.timeline{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.step{
-flex:1;
-min-width:250px;
-background:white;
-padding:25px;
-border-radius:16px;
-border-top:5px solid var(--gold);
-}
-
-.contact{
-background:var(--navy);
-color:white;
-padding:35px;
-border-radius:20px;
-}
-
-.contact a{
-color:#fff;
-text-decoration:none;
-}
-
-footer{
-text-align:center;
-padding:30px;
-color:#666;
-}
-
-/* MOBILE OPTIMIZATION */
-
-@media(max-width:768px){
-
-.hero{
-padding:60px 20px;
-}
-
-.hero h1{
-font-size:32px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.logo{
-position:relative;
-top:auto;
-right:auto;
-margin-bottom:20px;
-display:block;
-}
+/* SECTION */
 
 .section{
-padding:20px;
+    margin-bottom:40px;
 }
 
 .section-title{
-font-size:22px;
+    font-size:40px;
+    margin-bottom:28px;
+    font-weight:900;
 }
 
-.card h2{
-font-size:26px;
+.two-col{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:28px;
+}
+
+.panel{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border-radius:28px;
+    padding:36px;
+    border:1px solid var(--line);
+}
+
+.panel p{
+    color:var(--soft);
+    line-height:1.9;
+    font-size:16px;
+}
+
+.highlight{
+    color:var(--gold);
+    font-weight:800;
+}
+
+.bullets{
+    margin-top:20px;
+}
+
+.bullets li{
+    margin-bottom:16px;
+    line-height:1.8;
+    color:#d8dee4;
+}
+
+/* TABLE */
+
+.table-wrap{
+    width:100%;
+    overflow-x:auto;
+    border-radius:24px;
+    border:1px solid var(--line);
 }
 
 table{
-min-width:850px;
+    width:100%;
+    min-width:1000px;
+    border-collapse:collapse;
 }
 
-td,th{
-font-size:14px;
-padding:12px;
-vertical-align:middle;
+th{
+    background:#11202d;
+    color:var(--gold);
+    padding:20px;
+    text-align:left;
+    font-size:14px;
 }
 
-.timeline{
-flex-direction:column;
+td{
+    padding:20px;
+    border-top:1px solid var(--line);
+    color:#d7dde3;
+    vertical-align:top;
 }
 
+tr:hover{
+    background:rgba(255,255,255,0.03);
+}
+
+/* KPI */
+
+.kpi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.kpi{
+    background:linear-gradient(180deg,#132738,#102030);
+    padding:36px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.kpi h4{
+    color:var(--soft);
+    margin-bottom:16px;
+}
+
+.kpi h2{
+    font-size:54px;
+    color:var(--green);
+}
+
+/* CONTACT */
+
+.contact{
+    background:linear-gradient(135deg,#0e1b28,#14283a);
+    border-radius:32px;
+    padding:42px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.contact h2{
+    font-size:38px;
+    margin-bottom:16px;
+}
+
+.contact p{
+    color:var(--soft);
+    margin-bottom:10px;
+    line-height:1.8;
+}
+
+.footer-note{
+    margin-top:18px;
+    color:#9ba9b7;
+    font-size:13px;
+    line-height:1.8;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .two-col{
+        grid-template-columns:1fr;
+    }
+
+    .kpi-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:14px;
+    }
+
+    .hero{
+        min-height:680px;
+        border-radius:24px;
+    }
+
+    .hero-content{
+        padding:28px;
+    }
+
+    .hero h1{
+        font-size:38px;
+        line-height:1.1;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .logo{
+        top:18px;
+        right:18px;
+        padding:10px 14px;
+        font-size:12px;
+    }
+
+    .asking{
+        width:100%;
+        justify-content:center;
+        text-align:center;
+        font-size:28px;
+        padding:20px;
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:24px;
+    }
+
+    .card h2{
+        font-size:34px;
+    }
+
+    .section-title{
+        font-size:30px;
+        line-height:1.2;
+    }
+
+    .panel{
+        padding:24px;
+    }
+
+    .kpi h2{
+        font-size:42px;
+    }
+
+    th,td{
+        padding:16px;
+        font-size:14px;
+        vertical-align:middle;
+    }
+
+    .contact{
+        padding:28px;
+    }
+
+    .contact h2{
+        font-size:28px;
+    }
 }
 
 </style>
@@ -264,299 +405,354 @@ flex-direction:column;
 
 <div class="container">
 
-<div class="hero">
+    <!-- HERO -->
 
-<div class="logo">
-JOE COLLECTION
-</div>
+    <section class="hero">
 
-<h1>Holiday Inn Resort Phuket Surin Beach</h1>
+        <div class="logo">
+            JOE COLLECTION
+        </div>
 
-<p>
-Institutional Freehold Resort Acquisition Opportunity
-Located in Phuket's prestigious Surin Beach corridor.
-</p>
+        <div class="hero-content">
 
-</div>
+            <div class="tag">
+                PHUKET RESORT ACQUISITION OPPORTUNITY
+            </div>
 
-<div class="section">
+            <h1>
+                Holiday Inn Resort Phuket Surin Beach
+            </h1>
 
-<h2 class="section-title">Investment Snapshot</h2>
+            <p>
+                Rare institutional-scale resort acquisition opportunity in Phuket’s premium Surin Beach hospitality corridor. Positioned for significant RevPAR uplift, operational repositioning, and long-term capital appreciation through strategic asset enhancement and brand optimization.
+            </p>
 
-<div class="grid">
+            <div class="asking">
+                THB 1.8 BILLION
+                <span>ASKING PRICE</span>
+            </div>
 
-<div class="card">
-<h3>Asking Price</h3>
-<h2>THB 1.80B</h2>
-</div>
+        </div>
 
-<div class="card">
-<h3>Keys</h3>
-<h2>256</h2>
-</div>
+    </section>
 
-<div class="card">
-<h3>Land Area</h3>
-<h2>15,319 sqm</h2>
-</div>
+    <!-- KPI -->
 
-<div class="card">
-<h3>Freehold</h3>
-<h2 class="highlight">YES</h2>
-</div>
+    <div class="grid">
 
-</div>
+        <div class="card">
+            <h3>Total Keys</h3>
+            <h2>256</h2>
+            <p>Large-scale resort inventory with strong family & leisure positioning.</p>
+        </div>
 
-</div>
+        <div class="card">
+            <h3>Land Area</h3>
+            <h2>15,319 sqm</h2>
+            <p>Freehold landholding within Surin Beach growth corridor.</p>
+        </div>
 
-<div class="section">
+        <div class="card">
+            <h3>Current ADR</h3>
+            <h2>3,000 THB</h2>
+            <p>Significant upside relative to competitive upscale market set.</p>
+        </div>
 
-<h2 class="section-title">Property Information</h2>
+        <div class="card">
+            <h3>Projected ADR</h3>
+            <h2>4,500 THB</h2>
+            <p>Achievable through repositioning and yield optimization.</p>
+        </div>
 
-<div class="table-wrapper">
+    </div>
 
-<table>
+    <!-- INVESTMENT THESIS -->
 
-<tr>
-<th>Item</th>
-<th>Details</th>
-</tr>
+    <section class="section">
 
-<tr>
-<td>Property Name</td>
-<td>Holiday Inn Resort Phuket Surin Beach</td>
-</tr>
+        <h2 class="section-title">
+            Investment Thesis
+        </h2>
 
-<tr>
-<td>Brand</td>
-<td>Holiday Inn (Franchised)</td>
-</tr>
+        <div class="two-col">
 
-<tr>
-<td>Operator</td>
-<td>Destination Hospitality Management Co. Ltd</td>
-</tr>
+            <div class="panel">
 
-<tr>
-<td>Built</td>
-<td>2007</td>
-</tr>
+                <p>
+                    The property represents a compelling value-acquisition opportunity below estimated replacement cost. Located within Phuket’s resilient upscale leisure segment, the resort benefits from strong tourism recovery, expanding international arrivals, and increasing ADR pressure across the west coast hospitality market.
+                </p>
 
-<tr>
-<td>Storeys</td>
-<td>5</td>
-</tr>
+                <ul class="bullets">
 
-<tr>
-<td>F&B Outlets</td>
-<td>4</td>
-</tr>
+                    <li>
+                        <span class="highlight">Replacement Cost Arbitrage:</span>
+                        Estimated replacement value THB 1.79–1.96B versus acquisition price THB 1.8B.
+                    </li>
 
-<tr>
-<td>Facilities</td>
-<td>Swimming Pools, Spa, Kids Club, Fitness Centre</td>
-</tr>
+                    <li>
+                        <span class="highlight">Revenue Optimization:</span>
+                        Current performance materially below stabilized market benchmarks.
+                    </li>
 
-</table>
+                    <li>
+                        <span class="highlight">Brand Leverage:</span>
+                        Holiday Inn affiliation provides international distribution power and operational scalability.
+                    </li>
 
-</div>
+                    <li>
+                        <span class="highlight">Value Creation Potential:</span>
+                        Asset enhancement, wellness positioning, family tourism packaging, and F&B monetization.
+                    </li>
 
-</div>
+                </ul>
 
-<div class="section">
+            </div>
 
-<h2 class="section-title">Operational Upside</h2>
+            <div class="panel">
 
-<div class="table-wrapper">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1600&auto=format&fit=crop" style="border-radius:20px;">
 
-<table>
+            </div>
 
-<tr>
-<th>Metric</th>
-<th>Current</th>
-<th>Projected</th>
-<th>Growth</th>
-</tr>
+        </div>
 
-<tr>
-<td>ADR</td>
-<td>3,000 THB</td>
-<td>4,250 THB</td>
-<td><span class="badge green">+42%</span></td>
-</tr>
+    </section>
 
-<tr>
-<td>Occupancy</td>
-<td>60%</td>
-<td>75%</td>
-<td><span class="badge green">+25%</span></td>
-</tr>
+    <!-- FINANCIAL TABLE -->
 
-<tr>
-<td>RevPAR</td>
-<td>1,800 THB</td>
-<td>3,188 THB</td>
-<td><span class="badge green">+77%</span></td>
-</tr>
+    <section class="section">
 
-</table>
+        <h2 class="section-title">
+            Financial Upside & Exit Strategy
+        </h2>
 
-</div>
+        <div class="table-wrap">
 
-</div>
+            <table>
 
-<div class="section">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Current</th>
+                        <th>Projected Stabilized</th>
+                        <th>Value Creation Impact</th>
+                    </tr>
+                </thead>
 
-<h2 class="section-title">Replacement Cost Analysis</h2>
+                <tbody>
 
-<div class="table-wrapper">
+                    <tr>
+                        <td>ADR</td>
+                        <td>3,000 THB</td>
+                        <td>4,000–4,500 THB</td>
+                        <td>Premium positioning and improved yield management</td>
+                    </tr>
 
-<table>
+                    <tr>
+                        <td>Occupancy</td>
+                        <td>60%</td>
+                        <td>75%</td>
+                        <td>Enhanced international leisure penetration</td>
+                    </tr>
 
-<tr>
-<th>Category</th>
-<th>Low</th>
-<th>High</th>
-</tr>
+                    <tr>
+                        <td>NOI Margin</td>
+                        <td>Estimated 28%</td>
+                        <td>35%+</td>
+                        <td>Operational restructuring & economies of scale</td>
+                    </tr>
 
-<tr>
-<td>Land Cost</td>
-<td>335 MB</td>
-<td>431 MB</td>
-</tr>
+                    <tr>
+                        <td>Exit Valuation</td>
+                        <td>1.8B THB</td>
+                        <td>2.5B–2.9B THB</td>
+                        <td>Institutional exit after repositioning cycle</td>
+                    </tr>
 
-<tr>
-<td>Construction Cost</td>
-<td>1,297 MB</td>
-<td>1,350 MB</td>
-</tr>
+                    <tr>
+                        <td>Projected IRR</td>
+                        <td>-</td>
+                        <td>18%–24%</td>
+                        <td>5-year hold strategy</td>
+                    </tr>
 
-<tr>
-<td>FF&E + OS&E</td>
-<td>125 MB</td>
-<td>134 MB</td>
-</tr>
+                    <tr>
+                        <td>Projected MOIC</td>
+                        <td>-</td>
+                        <td>1.8x–2.3x</td>
+                        <td>Driven by RevPAR and exit cap compression</td>
+                    </tr>
 
-<tr>
-<td>Soft Cost</td>
-<td>45 MB</td>
-<td>45 MB</td>
-</tr>
+                    <tr>
+                        <td>Projected ROIC</td>
+                        <td>-</td>
+                        <td>22%+</td>
+                        <td>Asset repositioning and operational uplift</td>
+                    </tr>
 
-<tr>
-<td>Total Replacement Cost</td>
-<td>1,794 MB</td>
-<td>1,960 MB</td>
-</tr>
+                </tbody>
 
-</table>
+            </table>
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-<div class="section">
+    <!-- COST -->
 
-<h2 class="section-title">Value Creation Strategy</h2>
+    <section class="section">
 
-<div class="timeline">
+        <h2 class="section-title">
+            Replacement Cost Benchmark
+        </h2>
 
-<div class="step">
-<h3>Phase 1</h3>
-<p>
-Guestroom refurbishment and public area enhancement.
-</p>
-</div>
+        <div class="table-wrap">
 
-<div class="step">
-<h3>Phase 2</h3>
-<p>
-Reposition ADR to upper-midscale beach resort segment.
-</p>
-</div>
+            <table>
 
-<div class="step">
-<h3>Phase 3</h3>
-<p>
-Optimize distribution mix and increase direct bookings.
-</p>
-</div>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Estimated Cost</th>
+                    </tr>
+                </thead>
 
-<div class="step">
-<h3>Phase 4</h3>
-<p>
-Institutional exit or portfolio sale.
-</p>
-</div>
+                <tbody>
 
-</div>
+                    <tr>
+                        <td>Land Cost</td>
+                        <td>THB 335M – 431M</td>
+                    </tr>
 
-</div>
+                    <tr>
+                        <td>Construction Cost</td>
+                        <td>THB 74K – 77K / sqm</td>
+                    </tr>
 
-<div class="section">
+                    <tr>
+                        <td>FF&E + OS&E</td>
+                        <td>THB 490K – 525K / key</td>
+                    </tr>
 
-<h2 class="section-title">Illustrative Exit Scenario</h2>
+                    <tr>
+                        <td>Soft Cost</td>
+                        <td>THB 175K / key</td>
+                    </tr>
 
-<div class="table-wrapper">
+                    <tr>
+                        <td>Total Replacement Cost</td>
+                        <td>THB 1.79B – 1.96B</td>
+                    </tr>
 
-<table>
+                    <tr>
+                        <td>Replacement Cost / Key</td>
+                        <td>THB 7M – 7.7M / key</td>
+                    </tr>
 
-<tr>
-<th>Metric</th>
-<th>Value</th>
-</tr>
+                </tbody>
 
-<tr>
-<td>Total Investment</td>
-<td>2.00B THB</td>
-</tr>
+            </table>
 
-<tr>
-<td>Projected Exit Value</td>
-<td>2.90B THB</td>
-</tr>
+        </div>
 
-<tr>
-<td>MOIC</td>
-<td>1.45x</td>
-</tr>
+    </section>
 
-<tr>
-<td>ROIC</td>
-<td>45%</td>
-</tr>
+    <!-- RETURN KPI -->
 
-<tr>
-<td>Illustrative IRR (5 Years)</td>
-<td>15% - 18%</td>
-</tr>
+    <section class="section">
 
-</table>
+        <h2 class="section-title">
+            Investor Return Projection
+        </h2>
 
-</div>
+        <div class="kpi-grid">
 
-</div>
+            <div class="kpi">
+                <h4>Projected IRR</h4>
+                <h2>18–24%</h2>
+            </div>
 
-<div class="contact">
+            <div class="kpi">
+                <h4>Projected MOIC</h4>
+                <h2>1.8x–2.3x</h2>
+            </div>
 
-<h2>Contact</h2>
+            <div class="kpi">
+                <h4>Target Exit Value</h4>
+                <h2>2.9B</h2>
+            </div>
 
-<br>
+        </div>
 
-<p><strong>Monthon Mahakijdumrongnukul</strong></p>
+    </section>
 
-<p>Mobile: +66 80 657 8387</p>
+    <!-- STRATEGY -->
 
-<p>Email: joecollection.m@gmail.com</p>
+    <section class="section">
 
-</div>
+        <h2 class="section-title">
+            Strategic Value Creation Opportunities
+        </h2>
 
-<footer>
+        <div class="panel">
 
-Prepared by JOE COLLECTION |
-Confidential Investment Memorandum
+            <ul class="bullets">
 
-</footer>
+                <li>
+                    Luxury-soft refurbishment to elevate ADR positioning closer to premium lifestyle resort competitors.
+                </li>
+
+                <li>
+                    Introduce wellness retreat packages, long-stay family experiences, and premium suites.
+                </li>
+
+                <li>
+                    Re-engineer F&B concepts to improve capture rates and destination dining appeal.
+                </li>
+
+                <li>
+                    Implement dynamic pricing systems and direct-booking optimization.
+                </li>
+
+                <li>
+                    Potential institutional or REIT exit after operational stabilization.
+                </li>
+
+                <li>
+                    ESG-driven enhancements can further increase international investor attractiveness.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+
+        <h2>
+            Contact Information
+        </h2>
+
+        <p>
+            <strong>Monthon Mahakijdumrongnukul</strong>
+        </p>
+
+        <p>
+            Mobile: +66 80 657 8387
+        </p>
+
+        <p>
+            Email: joecollection.m@gmail.com
+        </p>
+
+        <div class="footer-note">
+            Confidential investment material prepared for qualified investors and hospitality acquisition discussions only.
+        </div>
+
+    </section>
 
 </div>
 
