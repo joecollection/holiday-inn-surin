@@ -939,9 +939,180 @@ tbody td {
 .d2 { animation-delay: 0.16s; }
 .d3 { animation-delay: 0.24s; }
 .d4 { animation-delay: 0.32s; }
+
+/* ════════════════════════════════════════
+   MARQUEE — GOLD TOP STRIP
+════════════════════════════════════════ */
+.marquee-strip {
+  width: 100%;
+  background: linear-gradient(90deg, #B8922E 0%, var(--gold) 30%, #D4AA50 60%, var(--gold) 80%, #B8922E 100%);
+  overflow: hidden;
+  padding: 9px 0;
+  position: relative;
+  z-index: 100;
+}
+.marquee-strip::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -60%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 3.5s infinite linear;
+  pointer-events: none;
+}
+@keyframes shimmer {
+  0%   { left: -60%; }
+  100% { left: 160%; }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 42s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 30px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.m-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: rgba(8,21,42,0.35);
+  flex-shrink: 0;
+}
+.m-star { font-size: 9px; opacity: 0.55; }
+
+/* ════════════════════════════════════════
+   TICKER — BLOOMBERG KPI BAR
+════════════════════════════════════════ */
+.ticker-strip {
+  width: 100%;
+  background: rgba(6, 16, 32, 0.97);
+  border-top: 1px solid rgba(201,168,76,0.28);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+}
+.ticker-strip::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 80px; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(6,16,32,0.97));
+  pointer-events: none;
+  z-index: 3;
+}
+.ticker-label {
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  z-index: 4;
+  white-space: nowrap;
+  border-right: 2px solid rgba(8,21,42,0.3);
+}
+.ticker-viewport {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 55s linear infinite;
+  padding: 10px 0;
+}
+.ticker-track:hover { animation-play-state: paused; }
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.t-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 20px;
+  white-space: nowrap;
+  border-right: 1px solid rgba(201,168,76,0.1);
+}
+.t-key {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.t-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+.t-val.tv-g { color: var(--green); }
+.t-val.tv-t { color: var(--teal-2); }
+.t-val.tv-w { color: var(--white); }
+.t-badge {
+  font-size: 8.5px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+.tb-up  { background: rgba(61,171,114,0.15); color: var(--green); }
+.tb-neu { background: rgba(37,145,142,0.12); color: var(--teal-2); }
+.tb-dim { background: rgba(122,147,173,0.12); color: var(--slate-2); }
 </style>
 </head>
 <body>
+
+<!-- ══════════════════════════════════════════════════════════
+     00A — MARQUEE STRIP (Gold — Top of Page)
+══════════════════════════════════════════════════════════ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <!-- Set 1 -->
+    <div class="marquee-item"><span class="m-star">✦</span> Exclusive Investment Opportunity <span class="m-dot"></span></div>
+    <div class="marquee-item">Holiday Inn Resort Phuket Surin Beach <span class="m-dot"></span></div>
+    <div class="marquee-item">256 Keys · Freehold · IHG Branded <span class="m-dot"></span></div>
+    <div class="marquee-item">Asking Price ฿1,800,000,000 THB <span class="m-dot"></span></div>
+    <div class="marquee-item">Surin Beach — Phuket's #1 ADR Sub-Market <span class="m-dot"></span></div>
+    <div class="marquee-item">Target IRR 18–24% · MOIC 2.5–3.5× <span class="m-dot"></span></div>
+    <div class="marquee-item">Replacement Cost ฿1,794–1,960MB <span class="m-dot"></span></div>
+    <div class="marquee-item">5 Storeys · 4 F&B Outlets · Spa · Kids Club <span class="m-dot"></span></div>
+    <div class="marquee-item">Contact Joe Collection · +66 80-657-8387 <span class="m-dot"></span></div>
+    <div class="marquee-item"><span class="m-star">✦</span> Strictly Confidential · For Qualified Investors Only <span class="m-dot"></span></div>
+    <!-- Set 2 — duplicate for seamless loop -->
+    <div class="marquee-item"><span class="m-star">✦</span> Exclusive Investment Opportunity <span class="m-dot"></span></div>
+    <div class="marquee-item">Holiday Inn Resort Phuket Surin Beach <span class="m-dot"></span></div>
+    <div class="marquee-item">256 Keys · Freehold · IHG Branded <span class="m-dot"></span></div>
+    <div class="marquee-item">Asking Price ฿1,800,000,000 THB <span class="m-dot"></span></div>
+    <div class="marquee-item">Surin Beach — Phuket's #1 ADR Sub-Market <span class="m-dot"></span></div>
+    <div class="marquee-item">Target IRR 18–24% · MOIC 2.5–3.5× <span class="m-dot"></span></div>
+    <div class="marquee-item">Replacement Cost ฿1,794–1,960MB <span class="m-dot"></span></div>
+    <div class="marquee-item">5 Storeys · 4 F&B Outlets · Spa · Kids Club <span class="m-dot"></span></div>
+    <div class="marquee-item">Contact Joe Collection · +66 80-657-8387 <span class="m-dot"></span></div>
+    <div class="marquee-item"><span class="m-star">✦</span> Strictly Confidential · For Qualified Investors Only <span class="m-dot"></span></div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════════════════════════
      HERO
@@ -998,6 +1169,59 @@ tbody td {
     <div class="ps-item">
       <span class="ps-label">Target IRR</span>
       <span class="ps-val highlight">18–24%</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     00B — TICKER STRIP (Bloomberg KPI Feed — Below Hero)
+══════════════════════════════════════════════════════════ -->
+<div class="ticker-strip">
+  <div class="ticker-label">LIVE DATA</div>
+  <div class="ticker-viewport">
+    <div class="ticker-track">
+      <!-- Set 1 -->
+      <div class="t-item"><span class="t-key">Asking Price</span><span class="t-val">฿1,800MB</span><span class="t-badge tb-neu">฿7.03M / Key</span></div>
+      <div class="t-item"><span class="t-key">Current ADR</span><span class="t-val">฿3,000</span><span class="t-badge tb-up">→ ฿4,000–4,500</span></div>
+      <div class="t-item"><span class="t-key">Occupancy</span><span class="t-val">60%</span><span class="t-badge tb-up">→ 75%</span></div>
+      <div class="t-item"><span class="t-key">RevPAR</span><span class="t-val">฿1,800</span><span class="t-badge tb-up">→ ฿3,375</span></div>
+      <div class="t-item"><span class="t-key">Target IRR</span><span class="t-val tv-g">18–24%</span></div>
+      <div class="t-item"><span class="t-key">MOIC</span><span class="t-val tv-g">2.5–3.5×</span></div>
+      <div class="t-item"><span class="t-key">ROIC (Stab.)</span><span class="t-val tv-t">8–12%</span></div>
+      <div class="t-item"><span class="t-key">Keys</span><span class="t-val tv-w">256</span><span class="t-badge tb-dim">5 Storeys</span></div>
+      <div class="t-item"><span class="t-key">GFA</span><span class="t-val tv-w">17,530 sqm</span></div>
+      <div class="t-item"><span class="t-key">Land</span><span class="t-val tv-w">9-2-40 Rai</span><span class="t-badge tb-neu">Freehold</span></div>
+      <div class="t-item"><span class="t-key">Replacement Cost</span><span class="t-val">฿1,794–1,960MB</span></div>
+      <div class="t-item"><span class="t-key">GOP (Upside Yr5)</span><span class="t-val tv-g">฿152MB</span><span class="t-badge tb-up">38% Margin</span></div>
+      <div class="t-item"><span class="t-key">NOI (Upside)</span><span class="t-val tv-g">฿125MB</span></div>
+      <div class="t-item"><span class="t-key">Phuket ADR 1H25</span><span class="t-val tv-g">฿5,652</span><span class="t-badge tb-up">+7.8% YoY</span></div>
+      <div class="t-item"><span class="t-key">Surin ADR Growth</span><span class="t-val tv-g">+21%</span><span class="t-badge tb-up">Phuket #1</span></div>
+      <div class="t-item"><span class="t-key">Phuket OCC 1H25</span><span class="t-val tv-t">79.5%</span><span class="t-badge tb-neu">+0.4pp</span></div>
+      <div class="t-item"><span class="t-key">Airport Pax 2025</span><span class="t-val tv-t">8.8M</span><span class="t-badge tb-up">+44% by 2030</span></div>
+      <div class="t-item"><span class="t-key">F&B Outlets</span><span class="t-val tv-w">4</span><span class="t-badge tb-dim">3 Pools · Spa</span></div>
+      <div class="t-item"><span class="t-key">IHG Rebrand</span><span class="t-val tv-w">2023</span><span class="t-badge tb-neu">Franchise Active</span></div>
+      <div class="t-item"><span class="t-key">Exit Horizon</span><span class="t-val">Yr 5–7</span><span class="t-badge tb-up">12–14× EBITDA</span></div>
+      <!-- Set 2 — duplicate for seamless loop -->
+      <div class="t-item"><span class="t-key">Asking Price</span><span class="t-val">฿1,800MB</span><span class="t-badge tb-neu">฿7.03M / Key</span></div>
+      <div class="t-item"><span class="t-key">Current ADR</span><span class="t-val">฿3,000</span><span class="t-badge tb-up">→ ฿4,000–4,500</span></div>
+      <div class="t-item"><span class="t-key">Occupancy</span><span class="t-val">60%</span><span class="t-badge tb-up">→ 75%</span></div>
+      <div class="t-item"><span class="t-key">RevPAR</span><span class="t-val">฿1,800</span><span class="t-badge tb-up">→ ฿3,375</span></div>
+      <div class="t-item"><span class="t-key">Target IRR</span><span class="t-val tv-g">18–24%</span></div>
+      <div class="t-item"><span class="t-key">MOIC</span><span class="t-val tv-g">2.5–3.5×</span></div>
+      <div class="t-item"><span class="t-key">ROIC (Stab.)</span><span class="t-val tv-t">8–12%</span></div>
+      <div class="t-item"><span class="t-key">Keys</span><span class="t-val tv-w">256</span><span class="t-badge tb-dim">5 Storeys</span></div>
+      <div class="t-item"><span class="t-key">GFA</span><span class="t-val tv-w">17,530 sqm</span></div>
+      <div class="t-item"><span class="t-key">Land</span><span class="t-val tv-w">9-2-40 Rai</span><span class="t-badge tb-neu">Freehold</span></div>
+      <div class="t-item"><span class="t-key">Replacement Cost</span><span class="t-val">฿1,794–1,960MB</span></div>
+      <div class="t-item"><span class="t-key">GOP (Upside Yr5)</span><span class="t-val tv-g">฿152MB</span><span class="t-badge tb-up">38% Margin</span></div>
+      <div class="t-item"><span class="t-key">NOI (Upside)</span><span class="t-val tv-g">฿125MB</span></div>
+      <div class="t-item"><span class="t-key">Phuket ADR 1H25</span><span class="t-val tv-g">฿5,652</span><span class="t-badge tb-up">+7.8% YoY</span></div>
+      <div class="t-item"><span class="t-key">Surin ADR Growth</span><span class="t-val tv-g">+21%</span><span class="t-badge tb-up">Phuket #1</span></div>
+      <div class="t-item"><span class="t-key">Phuket OCC 1H25</span><span class="t-val tv-t">79.5%</span><span class="t-badge tb-neu">+0.4pp</span></div>
+      <div class="t-item"><span class="t-key">Airport Pax 2025</span><span class="t-val tv-t">8.8M</span><span class="t-badge tb-up">+44% by 2030</span></div>
+      <div class="t-item"><span class="t-key">F&B Outlets</span><span class="t-val tv-w">4</span><span class="t-badge tb-dim">3 Pools · Spa</span></div>
+      <div class="t-item"><span class="t-key">IHG Rebrand</span><span class="t-val tv-w">2023</span><span class="t-badge tb-neu">Franchise Active</span></div>
+      <div class="t-item"><span class="t-key">Exit Horizon</span><span class="t-val">Yr 5–7</span><span class="t-badge tb-up">12–14× EBITDA</span></div>
     </div>
   </div>
 </div>
